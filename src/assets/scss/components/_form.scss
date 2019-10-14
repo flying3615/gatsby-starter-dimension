@@ -26,7 +26,7 @@
 		}
 
 		> .actions {
-			margin: ($gutter * 1.25) 0 0 0 !important;
+			margin: ($gutter * 1.25) 0 ($gutter * 1.25) 0 !important;
 		}
 
 		@include breakpoint(small) {
@@ -43,7 +43,7 @@
 			}
 
 			> .actions {
-				margin: ($gutter * 1) 0 0 0 !important;
+				margin: ($gutter * 1) 0 ($gutter * 1.25) 0 !important;
 			}
 		}
 
