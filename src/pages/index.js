@@ -10,6 +10,9 @@ import bg1 from '../images/bg_pprich1.jpg'
 import bg2 from '../images/bg_pprich2.jpg'
 import bg3 from '../images/bg_pprich3.jpg'
 
+import sc1 from '../images/sc1.jpg'
+import sc2 from '../images/sc2.jpg'
+
 
 let current = 0;
 
@@ -23,8 +26,8 @@ class IndexPage extends React.Component {
       articleTimeout: false,
       article: '',
       loading: 'is-loading',
-      background: bg3,
-      backgrounds: [bg1, bg2, bg3]
+      background: bg1,
+      backgrounds: [bg1, bg2, bg3, sc1, sc2]
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
