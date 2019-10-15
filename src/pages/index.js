@@ -141,7 +141,7 @@ class IndexPage extends React.Component {
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
             }
-          }/>
+          }></div>
         </div>
       </Layout>
     )
