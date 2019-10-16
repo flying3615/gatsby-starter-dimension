@@ -2,19 +2,6 @@ import React, {Component} from 'react'
 
 export default class Menu extends Component {
 
-  createMap() {
-    return {__html:
-        "<div class=\"mapouter\">" +
-          "<div class=\"gmap_canvas\">" +
-          "   <iframe width='100%' height='50%' src=\"https://maps.google.com/maps?q=China%20beach%20restaurant&t=&z=11&ie=UTF8&iwloc=&output=embed\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" />" +
-          "</div>" +
-          "   <style>" +
-          "    .mapouter{position:relative;text-align:right;height:100%;width:50%;}" +
-          "    .gmap_canvas {overflow:hidden;background:none!important;height:100%;width:50%;}" +
-          "</style>" +
-        "</div>"}
-  }
-
   render() {
     return (
       <article
@@ -48,7 +35,11 @@ export default class Menu extends Component {
             </li>
           </ul>
 
-          <div className="field" dangerouslySetInnerHTML={this.createMap()}/>
+          <div className="field" style={{overflow:'hidden', borderRadius:'5px'}}>
+            <iframe width='100%' height='50%'
+                    src='https://maps.google.com/maps?q=China%20beach%20restaurant&t=&z=11&ie=UTF8&iwloc=&output=embed'
+                    frameBorder='0' scrolling='no' marginHeight='0' marginWidth='0'/>
+          </div>
 
         </form>
         <ul className="icons">
