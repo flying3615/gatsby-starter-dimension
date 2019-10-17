@@ -6,12 +6,12 @@ import Main from '../components/Main'
 import Footer from '../components/Footer'
 
 
-import bg1 from '../images/bg_pprich1.jpg'
 import bg2 from '../images/bg_pprich2.jpg'
 import bg3 from '../images/bg_pprich3.jpg'
 
-import sc1 from '../images/sc1.jpg'
-import sc2 from '../images/sc2.jpg'
+import ppbg1 from '../images/ppbg1.jpg'
+import ppbg2 from '../images/ppbg2.jpg'
+import ppbg3 from '../images/ppbg3.jpg'
 
 
 let current = 0;
@@ -26,8 +26,8 @@ class IndexPage extends React.Component {
       articleTimeout: false,
       article: '',
       loading: 'is-loading',
-      background: bg1,
-      backgrounds: [bg1, bg2, bg3, sc1, sc2]
+      background: ppbg1,
+      backgrounds: [ppbg2, bg2, bg3, ppbg3,]
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
