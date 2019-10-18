@@ -13,6 +13,7 @@ import ppbg1 from '../images/ppbg1.jpg'
 import ppbg2 from '../images/ppbg2.jpg'
 import ppbg3 from '../images/ppbg3.jpg'
 import ppbg4 from '../images/ppbg4.jpg'
+import Background from '../components/Background'
 
 
 let current = 0;
@@ -59,10 +60,7 @@ class IndexPage extends React.Component {
       current++;
       current = current % this.state.backgrounds.length;
       this.setState({background: this.state.backgrounds[current]})
-    } else {
-      console.log("%o", this.state)
     }
-
   }
 
   setWrapperRef(node) {
@@ -135,14 +133,9 @@ class IndexPage extends React.Component {
             />
             <Footer timeout={this.state.timeout}/>
           </div>
-          <div id="bg" style={
-            {
-              backgroundImage: `url(${this.state.background})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }
-          }></div>
+
+          <Background background={this.state.background}/>
+
         </div>
       </Layout>
     )
