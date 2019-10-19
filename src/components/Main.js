@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import About from './menu/About'
+import GalleryShow from './menu/GalleryShow'
 import Intro from './menu/Intro'
 import Menu from './menu/Menu'
 import Contact from './menu/Contact'
@@ -18,7 +18,7 @@ class Main extends React.Component {
 
         <Menu {...this.props} />
 
-        <About {...this.props} />
+        <GalleryShow {...this.props} />
 
         <Contact {...this.props} />
 
