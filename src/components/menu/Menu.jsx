@@ -1,20 +1,19 @@
 import React, {Component} from 'react'
-import pic02 from "../../images/pic02.jpg";
-import pic01 from "../../images/pic01.jpg";
 import Starter from "./food/Starter";
 import MainDish from "./food/MainDish";
-import Dessert from "./food/Dessert";
+import SetMenu from "./food/SetMenu";
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
-import { makeStyles,withStyles, useTheme } from '@material-ui/core/styles';
+import {makeStyles, withStyles, useTheme} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
+
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const {children, value, index, ...other} = props;
 
   return (
     <Typography
@@ -47,7 +46,7 @@ const StyledTabs = withStyles({
       backgroundColor: '#635ee7',
     },
   },
-})(props => <Tabs {...props} TabIndicatorProps={{ children: <div /> }} />);
+})(props => <Tabs {...props} TabIndicatorProps={{children: <div/>}}/>);
 
 const StyledTab = withStyles(theme => ({
   root: {
@@ -68,7 +67,6 @@ function a11yProps(index) {
     'aria-controls': `full-width-tabpanel-${index}`,
   };
 }
-
 
 
 export default function Menu(props) {
@@ -92,36 +90,40 @@ export default function Menu(props) {
       style={{display: 'none'}}
     >
       <h2 className="major">Menu</h2>
-        <StyledTabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
-          variant="fullWidth"
-          aria-label="full width tabs example"
-        >
-          <StyledTab label="STARTER" {...a11yProps(0)} />
-          <StyledTab label="MAIN" {...a11yProps(1)} />
-          <StyledTab label="DESSERT" {...a11yProps(2)} />
-        </StyledTabs>
+      <StyledTabs
+        value={value}
+        onChange={handleChange}
+        indicatorColor="primary"
+        textColor="primary"
+        variant="fullWidth"
+        aria-label="full width tabs example"
+      >
+        <StyledTab label="STARTER" {...a11yProps(0)} />
+        <StyledTab label="MAIN" {...a11yProps(1)} />
+        <StyledTab label="SET MENU" {...a11yProps(2)} />
+      </StyledTabs>
       <SwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={value}
         onChangeIndex={handleChangeIndex}
       >
+
         <TabPanel value={value} index={0} dir={theme.direction}>
           <Starter/>
         </TabPanel>
+
         <TabPanel value={value} index={1} dir={theme.direction}>
           <MainDish/>
         </TabPanel>
+
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <Dessert />
+          <SetMenu/>
         </TabPanel>
+
       </SwipeableViews>
     </article>
 
-    )
+  )
 
 
 }

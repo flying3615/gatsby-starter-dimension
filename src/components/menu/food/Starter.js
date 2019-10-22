@@ -4,6 +4,11 @@ import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import springRollImg from "../../../images/spring_roll.jpeg";
+import noodle2 from "../../../images/noodle2.jpeg";
+import Carousel from 'react-images';
+
+const images = [{source:noodle2}, {source: springRollImg}]
 
 class Starter extends Component {
   render() {
@@ -11,22 +16,7 @@ class Starter extends Component {
       <div>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Card>
-              <CardMedia
-                component="img"
-                image="https://source.unsplash.com/Dm-qxdynoEc/800x799"
-                title="Contemplative Reptile"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2" color="textSecondary">
-                  Lizard
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                  across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </Card>
+            <Carousel views={images} />
           </Grid>
 
 
