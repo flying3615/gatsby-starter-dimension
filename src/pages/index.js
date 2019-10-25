@@ -6,13 +6,15 @@ import Main from '../components/Main'
 import Footer from '../components/Footer'
 
 
-import bg2 from '../images/bg_pprich2.jpg'
-import bg3 from '../images/bg_pprich3.jpg'
+import noodleBg1 from '../images/background/noodle_background1.jpg'
+import noodleMakeBg from '../images/background/noodle_making.jpg'
 
-import ppbg1 from '../images/ppbg1.jpg'
-import ppbg2 from '../images/ppbg2.jpg'
-import ppbg3 from '../images/ppbg3.jpg'
-import ppbg4 from '../images/ppbg4.jpg'
+import laternBg from '../images/background/laternbg.jpg'
+
+import ppbg1 from '../images/background/ppbg1.jpg'
+import ppbg2 from '../images/background/ppbg2.jpg'
+import ppbg3 from '../images/background/ppbg3.jpg'
+import ppbg4 from '../images/background/ppbg4.jpg'
 import Background from '../components/Background'
 
 
@@ -29,7 +31,7 @@ class IndexPage extends React.Component {
       article: '',
       loading: 'is-loading',
       background: ppbg1,
-      backgrounds: [ppbg2, bg2, bg3, ppbg3, ppbg4]
+      backgrounds: [ppbg2, noodleBg1, noodleMakeBg, ppbg3, ppbg4, laternBg]
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)

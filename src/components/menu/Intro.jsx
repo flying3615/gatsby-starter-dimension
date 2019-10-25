@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import pic01 from "../../images/pic01.jpg";
+import intro from "../../images/intro.jpg";
 
 export default class Intro extends Component {
 
@@ -14,7 +14,7 @@ export default class Intro extends Component {
       >
         <h2 className="major">Intro</h2>
         <span className="image main">
-                    <img src={pic01} alt=""/>
+                    <img src={intro} alt=""/>
                 </span>
         <p>
           Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin

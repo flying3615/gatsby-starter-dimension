@@ -1,14 +1,7 @@
 import React, {Component} from 'react';
 
-import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import setMenu from "../../../data/set_menu.pdf"
 
-import {Document, Page} from 'react-pdf';
-import dish1 from "../../../images/bg_pprich3.jpg";
-import dish2 from "../../../images/bg_pprich2.jpg";
 import Grid from "@material-ui/core/Grid";
 
 class Dessert extends Component {
