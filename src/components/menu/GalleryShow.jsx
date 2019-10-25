@@ -22,8 +22,6 @@ export default function GalleryShow(props) {
   const photos = data && data.allMenuCsv.edges
     .map(e => ({src: e.node.src, width: e.node.width, height: e.node.height}))
 
-  console.log("what's photos %o", photos)
-
 
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
