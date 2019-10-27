@@ -1,7 +1,7 @@
 import React, {useState, useCallback} from "react";
 import Gallery from "react-photo-gallery";
 import {graphql, useStaticQuery} from "gatsby";
-import {photos} from 'gallery/photos'
+import {photos} from './gallery/photos'
 
 
 export default function GalleryShow(props) {
