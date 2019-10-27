@@ -12,7 +12,7 @@ export default class Menu extends Component {
         style={{display: 'none'}}
       >
         <h2 className="major">Contact</h2>
-        <form method="post" action="#" data-netlify="true">
+        <form method="post" action="#" data-netlify="true" data-netlify-recaptcha="true">
           <div className="field half first">
             <label htmlFor="name">Name</label>
             <input type="text" name="name" id="name"/>
@@ -27,6 +27,9 @@ export default class Menu extends Component {
           </div>
 
           <ul className="actions">
+            <li>
+              <div data-netlify-recaptcha="true" />z
+            </li>
             <li>
               <input type="submit" value="Send Message" className="special"/>
             </li>
