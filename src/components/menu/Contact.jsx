@@ -13,6 +13,7 @@ export default class Menu extends Component {
       >
         <h2 className="major">Contact</h2>
         <form method="post" data-netlify="true" data-netlify-recaptcha="true" name="contact" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
           <div className="field half first">
             <label htmlFor="name">Name</label>
             <input type="text" name="name" id="name"/>
@@ -26,11 +27,9 @@ export default class Menu extends Component {
             <textarea name="message" id="message" rows="4"/>
           </div>
 
+          <div data-netlify-recaptcha="true" />
+
           <ul className="actions">
-            <li>
-              <div data-netlify-recaptcha="true" />
-              <input type="hidden" name="form-name" value="contact" />
-            </li>
             <li>
               <input type="submit" value="Send Message" className="special"/>
             </li>
