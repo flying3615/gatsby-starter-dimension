@@ -5,12 +5,12 @@ import MainDish from "./food/MainDish";
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import {makeStyles, withStyles, useTheme} from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Dessert from "./food/Dessert";
+import {graphql, useStaticQuery} from "gatsby";
 
 
 function TabPanel(props) {
@@ -72,6 +72,138 @@ function a11yProps(index) {
 
 
 export default function Menu(props) {
+
+  //TODO split dishes into each type
+  const menuData = useStaticQuery(
+    graphql`
+  query{
+    allBeefCsv {
+      edges {
+        node {
+          NameEn
+          NameZh
+          price
+          id
+        }
+      }
+    }
+    allChickenCsv {
+      edges {
+        node {
+          NameEn
+          NameZh
+          price
+          id
+        }
+      }
+    }
+    allChineseBarbecuredCsv {
+      edges {
+        node {
+          NameEn
+          NameZh
+          price
+          id
+        }
+      }
+    }
+    allEggCsv {
+      edges {
+        node {
+          NameEn
+          NameZh
+          price
+          id
+        }
+      }
+    }
+    allNoodleCsv {
+      edges {
+        node {
+          NameEn
+          NameZh
+          price
+          id
+        }
+      }
+    }
+    allPlateCsv {
+      edges {
+        node {
+          NameEn
+          NameZh
+          price
+          id
+        }
+      }
+    }
+    allPorkCsv {
+      edges {
+        node {
+          NameEn
+          NameZh
+          price
+          id
+        }
+      }
+    }
+    allRiceCsv {
+      edges {
+        node {
+          NameEn
+          NameZh
+          price
+          id
+        }
+      }
+    }
+    allSeafoodCsv {
+      edges {
+        node {
+          NameEn
+          NameZh
+          price
+          id
+        }
+      }
+    }
+    allSoupsCsv {
+      edges {
+        node {
+          NameEn
+          NameZh
+          price
+          id
+        }
+      }
+    }
+    allTofuCsv {
+      edges {
+        node {
+          NameEn
+          NameZh
+          price
+          id
+        }
+      }
+    }
+    allVegCsv{
+      edges {
+        node {
+          NameEn
+          NameZh
+          price
+          id
+        }
+      }
+    }
+  }`
+  )
+
+  // const photos = data && data.allMenuCsv.edges
+//   .map(e => ({src: e.node.src, width: e.node.width, height: e.node.height}))
+
+
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 

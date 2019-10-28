@@ -6,24 +6,7 @@ import {photos} from './gallery/photos'
 
 export default function GalleryShow(props) {
 
-  // TODO how to externalise src ???
-  // const data = useStaticQuery(
-  //   graphql`
-  //   query{
-  //   allMenuCsv {
-  //     edges {
-  //       node {
-  //         src,
-  //         width,
-  //         height
-  //       }
-  //     }
-  //   }
-  // }`
-  // )
 
-  // const photos = data && data.allMenuCsv.edges
-  //   .map(e => ({src: e.node.src, width: e.node.width, height: e.node.height}))
 
 
   return (

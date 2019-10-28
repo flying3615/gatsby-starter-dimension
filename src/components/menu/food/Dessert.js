@@ -3,30 +3,41 @@ import React, {Component} from 'react';
 import Typography from "@material-ui/core/Typography";
 
 import Grid from "@material-ui/core/Grid";
+import {graphql, useStaticQuery} from "gatsby";
 
-class Dessert extends Component {
+export default function Dessert(props) {
 
-  render() {
+  const data = useStaticQuery(
+    graphql`
+        query{
+          allDessertsCsv {
+          edges {
+              node {
+                NameEn
+                NameZh
+                price
+                id
+              }
+            }
+          }
+        }`
+  )
 
     return (
       <div>
         <Grid container spacing={3}>
 
           <Grid item xs={12}>
-            <Typography>
-              Main Dish Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-              aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-              convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-              magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas.
-              By the way, check out my <a href="#work">awesome work</a>.
-            </Typography>
+            <ul>
+              {
+                data && data.allDessertsCsv.edges
+                  .map(e => (<li>{e.node.NameZh} / {e.node.NameEn} --- ${e.node.price}</li>))
+              }
+            </ul>
           </Grid>
         </Grid>
       </div>
 
-    );
-  }
+    )
 
 }
-
-export default Dessert

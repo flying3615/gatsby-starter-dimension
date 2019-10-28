@@ -7,32 +7,45 @@ import Typography from "@material-ui/core/Typography";
 import springRollImg from "../../../images/spring_roll.jpeg";
 import noodle2 from "../../../images/noodle2.jpeg";
 import Carousel from 'react-images';
+import {graphql, useStaticQuery} from "gatsby";
 
-const images = [{source:noodle2}, {source: springRollImg}]
+const images = [{source: noodle2}, {source: springRollImg}]
 
-class Starter extends Component {
-  render() {
-    return (
-      <div>
-        <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <Carousel views={images} />
-          </Grid>
+export default function Starter(props) {
 
-
-          <Grid item xs={12}>
-            <Typography>
-              Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-              aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-              convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-              magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas.
-              By the way, check out my <a href="#work">awesome work</a>.
-            </Typography>
-          </Grid>
+  const data = useStaticQuery(
+    graphql`
+        query{
+          allEntreeCsv {
+          edges {
+              node {
+                NameEn
+                NameZh
+                price
+                id
+              }
+            }
+          }
+        }`
+  )
+  return (
+    <div>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Carousel views={images}/>
         </Grid>
-      </div>
-    );
-  }
-}
 
-export default Starter;
+
+        <Grid item xs={12}>
+          <ul>
+            {
+              data && data.allEntreeCsv.edges
+                .map(e => (<li>{e.node.NameZh} / {e.node.NameEn} --- ${e.node.price}</li>))
+            }
+          </ul>
+        </Grid>
+      </Grid>
+    </div>
+  )
+
+}
