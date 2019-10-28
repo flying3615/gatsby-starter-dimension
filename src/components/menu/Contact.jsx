@@ -1,8 +1,38 @@
 import React, {Component} from 'react'
 
-export default class Menu extends Component {
+
+const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
+export default class Contact extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {name: "", email: "", message: ""}
+  }
+
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      body: encode({"form-name": "contact", ...this.state})
+    }).then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  }
+
+  handleChange = e => this.setState({[e.target.name]: e.target.value});
+
+  handleReset = () => this.setState({name: "", email: "", message: ""})
+
 
   render() {
+
+    const {name, email, message} = this.state;
     return (
       <article
         id="contact"
@@ -12,33 +42,33 @@ export default class Menu extends Component {
         style={{display: 'none'}}
       >
         <h2 className="major">Contact</h2>
-        <form method="post" data-netlify="true" data-netlify-recaptcha="true" name="contact" data-netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact" />
+        <form onSubmit={this.handleSubmit} data-netlify-recaptcha="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact"/>
           <div className="field half first">
             <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name"/>
+            <input type="text" name="name" id="name" value={name} onChange={this.handleChange}/>
           </div>
           <div className="field half">
             <label htmlFor="email">Email</label>
-            <input type="text" name="email" id="email"/>
+            <input type="text" name="email" id="email" value={email} onChange={this.handleChange}/>
           </div>
           <div className="field">
             <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" rows="4"/>
+            <textarea name="message" id="message" rows="4" value={message} onChange={this.handleChange}/>
           </div>
 
-          <div data-netlify-recaptcha="true" />
+          <div data-netlify-recaptcha="true"/>
 
           <ul className="actions">
             <li>
               <input type="submit" value="Send Message" className="special"/>
             </li>
             <li>
-              <input type="reset" value="Reset"/>
+              <input type="reset" value="Reset" onClick={this.handleReset}/>
             </li>
           </ul>
 
-          <div className="field" style={{overflow:'hidden', borderRadius:'5px'}}>
+          <div className="field" style={{overflow: 'hidden', borderRadius: '5px'}}>
             <iframe width='100%' height='50%'
                     src='https://maps.google.com/maps?q=China%20beach%20restaurant&t=&z=11&ie=UTF8&iwloc=&output=embed'
                     frameBorder='0' scrolling='no' marginHeight='0' marginWidth='0'/>
