@@ -73,137 +73,6 @@ function a11yProps(index) {
 
 export default function Menu(props) {
 
-  //TODO split dishes into each type
-  const menuData = useStaticQuery(
-    graphql`
-  query{
-    allBeefCsv {
-      edges {
-        node {
-          NameEn
-          NameZh
-          price
-          id
-        }
-      }
-    }
-    allChickenCsv {
-      edges {
-        node {
-          NameEn
-          NameZh
-          price
-          id
-        }
-      }
-    }
-    allChineseBarbecuredCsv {
-      edges {
-        node {
-          NameEn
-          NameZh
-          price
-          id
-        }
-      }
-    }
-    allEggCsv {
-      edges {
-        node {
-          NameEn
-          NameZh
-          price
-          id
-        }
-      }
-    }
-    allNoodleCsv {
-      edges {
-        node {
-          NameEn
-          NameZh
-          price
-          id
-        }
-      }
-    }
-    allPlateCsv {
-      edges {
-        node {
-          NameEn
-          NameZh
-          price
-          id
-        }
-      }
-    }
-    allPorkCsv {
-      edges {
-        node {
-          NameEn
-          NameZh
-          price
-          id
-        }
-      }
-    }
-    allRiceCsv {
-      edges {
-        node {
-          NameEn
-          NameZh
-          price
-          id
-        }
-      }
-    }
-    allSeafoodCsv {
-      edges {
-        node {
-          NameEn
-          NameZh
-          price
-          id
-        }
-      }
-    }
-    allSoupsCsv {
-      edges {
-        node {
-          NameEn
-          NameZh
-          price
-          id
-        }
-      }
-    }
-    allTofuCsv {
-      edges {
-        node {
-          NameEn
-          NameZh
-          price
-          id
-        }
-      }
-    }
-    allVegCsv{
-      edges {
-        node {
-          NameEn
-          NameZh
-          price
-          id
-        }
-      }
-    }
-  }`
-  )
-
-  // const photos = data && data.allMenuCsv.edges
-//   .map(e => ({src: e.node.src, width: e.node.width, height: e.node.height}))
-
-
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
@@ -232,7 +101,7 @@ export default function Menu(props) {
         variant="fullWidth"
         aria-label="full width tabs example"
       >
-        <StyledTab label="STARTER" {...a11yProps(0)} />
+        <StyledTab label="ENTREE" {...a11yProps(0)} />
         <StyledTab label="MAIN" {...a11yProps(1)} />
         <StyledTab label="DESSERT" {...a11yProps(2)} />
         <StyledTab label="SET MENU" {...a11yProps(3)} />

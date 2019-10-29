@@ -31,7 +31,13 @@ export default function Dessert(props) {
             <ul>
               {
                 data && data.allDessertsCsv.edges
-                  .map(e => (<li>{e.node.NameZh} / {e.node.NameEn} --- ${e.node.price}</li>))
+                  .map(e => (
+                    <li key={e.node.id}>
+                      <Typography variant="subtitle1" gutterBottom>
+                        {e.node.NameZh} / {e.node.NameEn} --- ${e.node.price}
+                      </Typography>
+                    </li>)
+                  )
               }
             </ul>
           </Grid>

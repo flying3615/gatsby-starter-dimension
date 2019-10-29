@@ -5,6 +5,7 @@
   "author": "Hunter Chang",
   "dependencies": {
     "@material-ui/core": "^4.5.1",
+    "@material-ui/icons": "^4.5.1",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.15.28",
     "gatsby-plugin-manifest": "^2.2.20",
