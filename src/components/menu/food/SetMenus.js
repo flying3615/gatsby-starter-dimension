@@ -140,7 +140,7 @@ class SetMenus extends Component {
           </Hidden>
 
           <Grid item xs={12}>
-            {/*<SetMenu/>*/}
+            <SetMenu/>
           </Grid>
         </Grid>
       </Grid>
