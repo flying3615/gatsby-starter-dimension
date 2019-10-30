@@ -14,12 +14,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import {Document, Page} from "react-pdf";
 import setMenu from "../../../data/set_menu.pdf";
 import Hidden from "@material-ui/core/Hidden";
-
-// const useStyles = makeStyles({
-//   card: {
-//     maxWidth: 500,
-//   },
-// });
+import SetMenu from "./main/SetMenu";
 
 class SetMenus extends Component {
   // const classes = useStyles()
@@ -40,7 +35,7 @@ class SetMenus extends Component {
 
   nextPage = () => this.changePage(1);
 
-  seeMenu =() => {
+  seeMenu = () => {
     window.open(setMenu)
   }
 
@@ -145,13 +140,7 @@ class SetMenus extends Component {
           </Hidden>
 
           <Grid item xs={12}>
-            <Typography>
-              Main Dish Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-              aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-              convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-              magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas.
-              By the way, check out my <a href="#work">awesome work</a>.
-            </Typography>
+            {/*<SetMenu/>*/}
           </Grid>
         </Grid>
       </Grid>

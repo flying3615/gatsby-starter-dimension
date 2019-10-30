@@ -7,6 +7,9 @@ import fried_dumplings from "../../../images/entree/fried_dumplings.jpg"
 import spring_rools from "../../../images/entree/spring_rolls.jpg"
 import Carousel from 'react-images';
 import {graphql, useStaticQuery} from "gatsby";
+import Divider from "@material-ui/core/Divider";
+import Entree from "./main/Entree";
+import Soup from "./main/Soup";
 
 const images = [
   {source: scallops},
@@ -14,46 +17,26 @@ const images = [
   {source: fried_dumplings},
   {source: entree_combination},
 
-  ]
+]
 
-export default function Starter(props) {
+export default function Starter() {
 
-  const data = useStaticQuery(
-    graphql`
-        query{
-          allEntreeCsv {
-          edges {
-              node {
-                NameEn
-                NameZh
-                price
-                id
-              }
-            }
-          }
-        }`
-  )
   return (
     <div>
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Carousel views={images}/>
         </Grid>
+        <Grid>
 
+          <h3 className="major">Entree/前菜</h3>
+          <Entree/>
+          <Divider variant="middle"/>
 
-        <Grid item xs={12}>
-          <ul>
-            {
-              data && data.allEntreeCsv.edges
-                .map(e => (
-                  <li key={e.node.id}>
-                    <Typography variant="subtitle1" gutterBottom>
-                      {e.node.NameZh} / {e.node.NameEn} --- ${e.node.price}
-                    </Typography>
-                  </li>)
-                )
-            }
-          </ul>
+          <h3 className="major">Soup/汤类</h3>
+          <Soup/>
+          <Divider variant="middle"/>
+
         </Grid>
       </Grid>
     </div>

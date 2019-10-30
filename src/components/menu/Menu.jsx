@@ -42,7 +42,7 @@ const StyledTabs = withStyles({
     justifyContent: 'center',
     backgroundColor: 'transparent',
     '& > div': {
-      maxWidth: 40,
+      maxWidth: 30,
       width: '100%',
       backgroundColor: '#635ee7',
     },
@@ -53,9 +53,9 @@ const StyledTab = withStyles(theme => ({
   root: {
     textTransform: 'none',
     color: '#fff',
-    minWidth: 100,
+    minWidth: 50,
     fontWeight: theme.typography.fontWeightRegular,
-    fontSize: theme.typography.pxToRem(15),
+    fontSize: theme.typography.pxToRem(12),
     marginRight: theme.spacing(1),
     '&:focus': {
       opacity: 1,
@@ -101,7 +101,7 @@ export default function Menu(props) {
         variant="fullWidth"
         aria-label="full width tabs example"
       >
-        <StyledTab label="ENTREE" {...a11yProps(0)} />
+        <StyledTab label="ENTREE & SOUP" {...a11yProps(0)} />
         <StyledTab label="MAIN" {...a11yProps(1)} />
         <StyledTab label="DESSERT" {...a11yProps(2)} />
         <StyledTab label="SET MENU" {...a11yProps(3)} />

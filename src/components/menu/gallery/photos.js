@@ -4,7 +4,8 @@ import dumpling from "../../../images/gallery/dumpling.jpeg";
 import spicyMeat from "../../../images/gallery/spicyMeat.jpeg";
 import wontong from "../../../images/gallery/wontong.jpeg";
 import yumcha from "../../../images/gallery/yumcha.jpeg";
-import springroll from "../../../images/gallery/springroll.jpeg";
+import together from "../../../images/gallery/together.jpeg";
+import bbq from "../../../images/bbq.jpg";
 
 export const photos = [
   {
@@ -14,6 +15,11 @@ export const photos = [
   },
   {
     src: chicken,
+    width: 4,
+    height: 3
+  },
+  {
+    src: together,
     width: 4,
     height: 3
   },
@@ -38,8 +44,8 @@ export const photos = [
     height: 3
   },
   {
-    src: springroll,
+    src: bbq,
     width: 3,
-    height: 4
+    height: 3
   },
 ]
