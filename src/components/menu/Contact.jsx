@@ -52,7 +52,7 @@ export default class Contact extends Component {
           </div>
           <div className="field half">
             <label htmlFor="email">Email</label>
-            <input type="text" name="email" id="email" value={email} onChange={this.handleChange}/>
+            <input type="email" name="email" id="email" value={email} onChange={this.handleChange}/>
           </div>
           <div className="field">
             <label htmlFor="message">Message</label>
