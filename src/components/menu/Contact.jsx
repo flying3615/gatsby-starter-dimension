@@ -25,7 +25,10 @@ export default class Contact extends Component {
         ...this.state,
       }),
     })
-      .then(() => navigate(form.getAttribute('action')))
+      .then(() => {
+        alert("Thank you for the feedback!")
+        window.location.reload()
+      })
       .catch((error) => alert(error))
   }
 
@@ -55,11 +58,11 @@ export default class Contact extends Component {
 
           <input type="hidden" name="form-name" value="contactFM"/>
 
-          <div>
+          <p hidden>
             <label>
               Don’t fill this out: <input name="bot-field" onChange={this.handleChange}/>
             </label>
-          </div>
+          </p>
 
           <div className="field half first">
             <label htmlFor="name">Name</label>
