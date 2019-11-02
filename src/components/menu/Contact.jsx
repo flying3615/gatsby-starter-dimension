@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import {navigate} from 'gatsby-link'
 
 const encode = (data) => {
   return Object.keys(data)
@@ -14,17 +14,19 @@ export default class Contact extends Component {
     this.state = {name: "", email: "", message: ""}
   }
 
-  handleSubmit = e => {
-
-    e.preventDefault();
-
-    fetch("/", {
-      method: "POST",
-      headers: {"Content-Type": "application/x-www-form-urlencoded"},
-      body: encode({"form-name": "contact", ...this.state})
-    }).then(() => alert("Thank you for the feedback!"))
-      .catch(error => alert(error));
-
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch((error) => alert(error))
   }
 
   handleChange = e => this.setState({[e.target.name]: e.target.value});
@@ -44,8 +46,21 @@ export default class Contact extends Component {
         style={{display: 'none'}}
       >
         <h2 className="major">Contact</h2>
-        <form onSubmit={this.handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact"/>
+        <form name="contactFM"
+              method="post"
+              action="/thanks/"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}>
+
+          <input type="hidden" name="form-name" value="contactFM"/>
+
+          <div>
+            <label>
+              Don’t fill this out: <input name="bot-field" onChange={this.handleChange}/>
+            </label>
+          </div>
+
           <div className="field half first">
             <label htmlFor="name">Name</label>
             <input type="text" name="name" id="name" value={name} onChange={this.handleChange}/>
