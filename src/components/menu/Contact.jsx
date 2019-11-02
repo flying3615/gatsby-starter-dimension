@@ -51,7 +51,7 @@ export default class Contact extends Component {
               action="/thanks/"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              onSubmit={handleSubmit}>
+              onSubmit={this.handleSubmit}>
 
           <input type="hidden" name="form-name" value="contactFM"/>
 
