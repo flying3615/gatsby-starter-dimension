@@ -15,14 +15,16 @@ export default class Contact extends Component {
   }
 
   handleSubmit = e => {
+
+    e.preventDefault();
+
     fetch("/", {
       method: "POST",
       headers: {"Content-Type": "application/x-www-form-urlencoded"},
       body: encode({"form-name": "contact", ...this.state})
-    }).then(() => alert("Success!"))
+    }).then(() => alert("Thank you for the feedback!"))
       .catch(error => alert(error));
 
-    e.preventDefault();
   }
 
   handleChange = e => this.setState({[e.target.name]: e.target.value});
@@ -42,7 +44,7 @@ export default class Contact extends Component {
         style={{display: 'none'}}
       >
         <h2 className="major">Contact</h2>
-        <form onSubmit={this.handleSubmit} data-netlify-recaptcha="true" data-netlify-honeypot="bot-field">
+        <form onSubmit={this.handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact"/>
           <div className="field half first">
             <label htmlFor="name">Name</label>
@@ -57,7 +59,7 @@ export default class Contact extends Component {
             <textarea name="message" id="message" rows="4" value={message} onChange={this.handleChange}/>
           </div>
 
-          <div data-netlify-recaptcha="true"/>
+          {/*<div data-netlify-recaptcha="true"/>*/}
 
           <ul className="actions">
             <li>
