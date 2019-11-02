@@ -22,7 +22,7 @@ export default class Contact extends Component {
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       body: encode({
         'form-name': form.getAttribute('name'),
-        ...state,
+        ...this.state,
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
@@ -48,7 +48,7 @@ export default class Contact extends Component {
         <h2 className="major">Contact</h2>
         <form name="contactFM"
               method="post"
-              action="/thanks/"
+              action="/"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSubmit={this.handleSubmit}>
