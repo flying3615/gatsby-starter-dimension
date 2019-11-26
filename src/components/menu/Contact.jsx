@@ -98,14 +98,14 @@ export default class Contact extends Component {
         <ul className="icons">
           <li>
             <a
-              href="https://twitter.com/HuntaroSan"
+              href="https://www.tripadvisor.co.nz/Restaurant_Review-g676246-d5952729-Reviews-China_Beach_Restaurant_Take_Away-Paraparaumu_Kapiti_Coast_Greater_Wellington_Nort.html"
               className="icon fa-tripadvisor"
             >
               <span className="label">TripAdvisor</span>
             </a>
           </li>
           <li>
-            <a href="https://codebushi.com" className="icon fa-facebook">
+            <a href="https://www.facebook.com/China-Beach-Restaurant-801623986687741/" className="icon fa-facebook">
               <span className="label">Facebook</span>
             </a>
           </li>

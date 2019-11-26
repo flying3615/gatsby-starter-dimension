@@ -1,20 +1,10 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Typography from "@material-ui/core/Typography";
-import chicken from "../../../../images/dishes/chicken.jpg";
-import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
+
 
 const Chicken = ({ data }) => (
   <div>
-    <Card style={{margin: '15px'}}>
-      <CardMedia
-        component="img"
-        image={chicken}
-      />
-    </Card>
-
     <ul>
       {
         data && data.allChickenCsv.edges

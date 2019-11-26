@@ -18,9 +18,31 @@ import Tofu from "./main/Tofu";
 import Veg from "./main/Veg";
 import allMenu from "../../../data/all_menu.pdf";
 
+import duck from "../../../images/dishes/duck.jpg";
+import orange_beef from "../../../images/dishes/beef.jpg";
+import rice from "../../../images/dishes/rice.jpg";
+import sizzling from "../../../images/dishes/sizzling.jpg";
+import snack from "../../../images/dishes/snack.jpg";
+import tofu from "../../../images/dishes/tofu.jpg";
+import roll from "../../../images/dishes/roll.jpg";
+import egg from "../../../images/dishes/egg.jpg";
+
+import Carousel from "react-images";
+
 const seeMenu =() => {
   window.open(allMenu)
 }
+
+const images = [
+  {source: duck},
+  {source: orange_beef},
+  {source: rice},
+  {source: sizzling},
+  {source: snack},
+  {source: tofu},
+  {source: egg},
+  {source: roll},
+]
 
 export default function MainDish() {
 
@@ -28,6 +50,20 @@ export default function MainDish() {
   return (
     <div>
       <Grid container spacing={3}>
+
+        <Grid item xs={12}>
+          <Carousel views={images}/>
+        </Grid>
+
+        <Grid item xs={12}>
+          <button
+            type="button"
+            onClick={seeMenu}
+          >
+            See Menu...
+          </button>
+        </Grid>
+
         <Grid item xs={12}>
 
           <h3 className="major">Chinese BBQ/烧味</h3>
@@ -79,14 +115,7 @@ export default function MainDish() {
           <Divider variant="middle"/>
 
         </Grid>
-        <Grid item xs={12}>
-          <button
-            type="button"
-            onClick={seeMenu}
-          >
-            See more...
-          </button>
-        </Grid>
+
       </Grid>
     </div>
 

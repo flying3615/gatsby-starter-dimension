@@ -103,8 +103,8 @@ export default function Menu(props) {
       >
         <StyledTab label="ENTREE & SOUP" {...a11yProps(0)} />
         <StyledTab label="MAIN" {...a11yProps(1)} />
-        <StyledTab label="DESSERT" {...a11yProps(2)} />
-        <StyledTab label="SET MENU" {...a11yProps(3)} />
+        {/*<StyledTab label="DESSERT" {...a11yProps(2)} />*/}
+        <StyledTab label="SET MENU" {...a11yProps(2)} />
       </StyledTabs>
       <SwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
@@ -120,11 +120,11 @@ export default function Menu(props) {
           <MainDish/>
         </TabPanel>
 
-        <TabPanel value={value} index={2} dir={theme.direction}>
-          <Dessert/>
-        </TabPanel>
+        {/*<TabPanel value={value} index={2} dir={theme.direction}>*/}
+          {/*<Dessert/>*/}
+        {/*</TabPanel>*/}
 
-        <TabPanel value={value} index={3} dir={theme.direction}>
+        <TabPanel value={value} index={2} dir={theme.direction}>
           <SetMenus/>
         </TabPanel>
 
