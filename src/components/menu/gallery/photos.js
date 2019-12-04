@@ -7,7 +7,46 @@ import yumcha from "../../../images/gallery/yumcha.jpeg";
 import together from "../../../images/gallery/together.jpeg";
 import bbq from "../../../images/bbq.jpg";
 
+
+import noodle from "../../../images/gallery/noodle.jpeg";
+import noodle2 from "../../../images/gallery/noodle2.jpeg";
+import noodle_background1 from "../../../images/gallery/noodle_background1.jpeg";
+import noodle_making from "../../../images/gallery/noodle_making.jpeg";
+import spice_fish from "../../../images/gallery/spice_fish.jpeg";
+import spring_roll from "../../../images/gallery/spring_roll.jpeg";
+
+
 export const photos = [
+  {
+    src: noodle2,
+    width: 3,
+    height: 3
+  },
+  {
+    src: noodle_making,
+    width: 4,
+    height: 3
+  },
+  {
+    src: spice_fish,
+    width: 4,
+    height: 3
+  },
+  {
+    src: spring_roll,
+    width: 3,
+    height: 3
+  },
+  {
+    src: noodle_background1,
+    width: 3,
+    height: 3
+  },
+  {
+    src: noodle,
+    width: 3,
+    height: 4
+  },
   {
     src: iron,
     width: 3,

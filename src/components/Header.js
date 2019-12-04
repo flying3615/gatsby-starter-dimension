@@ -1,10 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import logo from '../images/paper-lantern_logo.png'
 
 const Header = (props) => (
     <header id="header" style={props.timeout ? {display: 'none'} : {}}>
         <div className="logo">
-            <span className="icon fa-envira"/>
+            {/*<span className="icon fa-envira"/>*/}
+            <img src={logo}  style={{width:'100%', height:'100%'}}/>
         </div>
         <div className="content">
             <div className="inner">

@@ -19,13 +19,14 @@ import Veg from "./main/Veg";
 import allMenu from "../../../data/all_menu.pdf";
 
 import duck from "../../../images/dishes/duck.jpg";
-import orange_beef from "../../../images/dishes/beef.jpg";
-import rice from "../../../images/dishes/rice.jpg";
-import sizzling from "../../../images/dishes/sizzling.jpg";
-import snack from "../../../images/dishes/snack.jpg";
-import tofu from "../../../images/dishes/tofu.jpg";
-import roll from "../../../images/dishes/roll.jpg";
-import egg from "../../../images/dishes/egg.jpg";
+import orange_beef from "../../../images/dishes/orange_beef.jpg";
+import rice from "../../../images/dishes/fried_rice.jpg";
+import fried_pork from "../../../images/dishes/fried_pork.jpg";
+import sizzeling from "../../../images/dishes/sizzeling.jpg";
+import broccli from "../../../images/dishes/broccli.jpg";
+import omlet from "../../../images/dishes/omlet.jpg";
+import chicken from "../../../images/dishes/chicken.jpg";
+import lemon_chicken from "../../../images/dishes/lemon_chicken.jpg";
 
 import Carousel from "react-images";
 
@@ -37,11 +38,12 @@ const images = [
   {source: duck},
   {source: orange_beef},
   {source: rice},
-  {source: sizzling},
-  {source: snack},
-  {source: tofu},
-  {source: egg},
-  {source: roll},
+  {source: sizzeling},
+  {source: broccli},
+  {source: omlet},
+  {source: chicken},
+  {source: lemon_chicken},
+  {source: fried_pork},
 ]
 
 export default function MainDish() {
