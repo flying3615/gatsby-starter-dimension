@@ -66,55 +66,71 @@ export default function MainDish() {
           </button>
         </Grid>
 
-        <Grid item xs={12}>
+        <Grid container xs={12}>
 
-          <h3 className="major">Chinese BBQ/烧味</h3>
-          <BBQ/>
-          <Divider variant="middle"/>
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Pork/猪肉</h3>
+            <Pork/>
+            <Divider variant="middle"/>
+          </Grid>
 
-          <h3 className="major">Sizzling Plate/铁板烧</h3>
-          <Plate/>
-          <Divider variant="middle"/>
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Chinese BBQ/烧味</h3>
+            <BBQ/>
+            <Divider variant="middle"/>
 
-          <h3 className="major">Chicken/鸡肉</h3>
-          <Chicken/>
-          <Divider variant="middle"/>
+          </Grid>
 
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Chicken/鸡肉</h3>
+            <Chicken/>
+            <Divider variant="middle"/>
+          </Grid>
 
-          <h3 className="major">Beef/牛肉</h3>
-          <Beef/>
-          <Divider variant="middle"/>
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Beef/牛肉</h3>
+            <Beef/>
+            <Divider variant="middle"/>
+          </Grid>
 
-          <h3 className="major">Seafood/海鲜</h3>
-          <Seafood/>
-          <Divider variant="middle"/>
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Seafood/海鲜</h3>
+            <Seafood/>
+            <Divider variant="middle"/>
+          </Grid>
 
-          <h3 className="major">Pork/猪肉</h3>
-          <Pork/>
-          <Divider variant="middle"/>
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Sizzling Plate/铁板烧</h3>
+            <Plate/>
+            <Divider variant="middle"/>
+          </Grid>
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Tofu/豆腐</h3>
+            <Tofu/>
+            <Divider variant="middle"/>
+          </Grid>
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Vegetarian/素菜</h3>
+            <Veg/>
+            <Divider variant="middle"/>
+          </Grid>
 
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Fired Noodles/炒面</h3>
+            <Noodle/>
+            <Divider variant="middle"/>
+          </Grid>
 
-          <h3 className="major">Tofu/豆腐</h3>
-          <Tofu/>
-          <Divider variant="middle"/>
-
-          <h3 className="major">Vegetarian/素菜</h3>
-          <Veg/>
-          <Divider variant="middle"/>
-
-
-          <h3 className="major">Egg Foo Young/芙蓉蛋类</h3>
-          <Egg/>
-          <Divider variant="middle"/>
-
-
-          <h3 className="major">Fried Rice/炒饭</h3>
-          <Rice/>
-          <Divider variant="middle"/>
-
-          <h3 className="major">Chow Mein(Noodles)/炒面</h3>
-          <Noodle/>
-          <Divider variant="middle"/>
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Fried Rice/炒饭</h3>
+            <Rice/>
+            <Divider variant="middle"/>
+          </Grid>
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Egg Foo Young/芙蓉蛋类</h3>
+            <Egg/>
+            <Divider variant="middle"/>
+          </Grid>
 
         </Grid>
 

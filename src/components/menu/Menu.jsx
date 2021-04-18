@@ -1,16 +1,14 @@
-import React, {Component} from 'react'
+import React from 'react'
 import Starter from "./food/Starter";
 import SetMenus from "./food/SetMenus";
 import MainDish from "./food/MainDish";
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
-import {makeStyles, withStyles, useTheme} from '@material-ui/core/styles';
+import {withStyles, useTheme} from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Dessert from "./food/Dessert";
-import {graphql, useStaticQuery} from "gatsby";
 
 
 function TabPanel(props) {
@@ -55,7 +53,7 @@ const StyledTab = withStyles(theme => ({
     color: '#fff',
     minWidth: 50,
     fontWeight: theme.typography.fontWeightRegular,
-    fontSize: theme.typography.pxToRem(12),
+    fontSize: theme.typography.pxToRem(15),
     marginRight: theme.spacing(1),
     '&:focus': {
       opacity: 1,
@@ -103,7 +101,6 @@ export default function Menu(props) {
       >
         <StyledTab label="ENTREE & SOUP" {...a11yProps(0)} />
         <StyledTab label="MAIN" {...a11yProps(1)} />
-        {/*<StyledTab label="DESSERT" {...a11yProps(2)} />*/}
         <StyledTab label="SET MENU" {...a11yProps(2)} />
       </StyledTabs>
       <SwipeableViews
@@ -119,10 +116,6 @@ export default function Menu(props) {
         <TabPanel value={value} index={1} dir={theme.direction}>
           <MainDish/>
         </TabPanel>
-
-        {/*<TabPanel value={value} index={2} dir={theme.direction}>*/}
-          {/*<Dessert/>*/}
-        {/*</TabPanel>*/}
 
         <TabPanel value={value} index={2} dir={theme.direction}>
           <SetMenus/>

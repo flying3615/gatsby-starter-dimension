@@ -20,15 +20,19 @@ export default function Starter() {
         <Grid item xs={12}>
           <Carousel views={images}/>
         </Grid>
-        <Grid>
 
-          <h3 className="major">Entree/前菜</h3>
-          <Entree/>
-          <Divider variant="middle"/>
+        <Grid container xs={12}>
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Entree/前菜</h3>
+            <Entree/>
+            <Divider variant="middle"/>
+          </Grid>
 
-          <h3 className="major">Soup/汤类</h3>
-          <Soup/>
-          <Divider variant="middle"/>
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Soup/汤类</h3>
+            <Soup/>
+            <Divider variant="middle"/>
+          </Grid>
 
         </Grid>
       </Grid>

@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import intro from "../../images/intro.jpg";
 
+
 export default class Intro extends Component {
 
   render() {
@@ -13,9 +14,7 @@ export default class Intro extends Component {
         style={{display: 'none'}}
       >
         <h2 className="major">Intro</h2>
-        <span className="image main">
-                    <img src={intro} alt=""/>
-                </span>
+
         <p>
           China Beach Restaurant is a Chinese restaurant with full license and can also serve BYO wine. Our restaurant is located on paraparaumu beach.
           You can appreciate the charming sea sunset while dining.
@@ -28,6 +27,9 @@ export default class Intro extends Component {
           China Beach 一直致力于经营多种口味的中式餐饮，既有广式的点心、各式烧腊，也有传统的北京烤鸭、铁板菜式，同时还提供四川口味的水煮牛、水煮鱼等等，
           为您提供不同的餐饮选择。
         </p>
+        <span className="image main">
+            <img src={intro} alt=""/>
+        </span>
       </article>
     )
   }

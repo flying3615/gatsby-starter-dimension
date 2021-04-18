@@ -8,7 +8,7 @@ const Egg = ({ data }) => (
       data && data.allEggCsv.edges
         .map(e => (
           <li key={e.node.id}>
-            <Typography variant="subtitle1" gutterBottom>
+            <Typography variant="p" gutterBottom>
               {e.node.NameZh} / {e.node.NameEn} --- ${e.node.price}
             </Typography>
           </li>)

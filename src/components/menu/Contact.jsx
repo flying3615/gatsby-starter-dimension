@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {navigate} from 'gatsby-link'
 
 const encode = (data) => {
   return Object.keys(data)
@@ -93,6 +92,14 @@ export default class Contact extends Component {
                     src='https://maps.google.com/maps?q=China%20beach%20restaurant&t=&z=11&ie=UTF8&iwloc=&output=embed'
                     frameBorder='0' scrolling='no' marginHeight='0' marginWidth='0'/>
           </div>
+
+          <address>
+            <strong>Manager: Linda Yin</strong><br/>
+            Email: <a href="mailto:lindayin0930@gmail.com"> lindayin0930@gmail.com</a><br/>
+            Phone: <a href="tel:+6442988862">+6442988862</a><br/>
+            Visit us at:<br/>
+            <a href="https://maps.google.com/maps?q=China%20beach%20restaurant" target="_blank"> 44 Seaview Road, Paraparaumu Beach, Paraparaumu</a>
+          </address>
 
         </form>
         <ul className="icons">

@@ -17,7 +17,6 @@
     "gatsby-source-filesystem": "^2.11.1",
     "gatsby-source-googlemaps-geocoding": "^1.0.0",
     "gatsby-transformer-csv": "^2.10.0",
-    "node-sass": "^4.14.1",
     "react": "^16.14.0",
     "react-animations": "^1.0.0",
     "react-dom": "^16.14.0",
@@ -28,6 +27,7 @@
     "react-photo-gallery": "^8.0.0",
     "react-scrollmagic": "^2.2.0",
     "react-swipeable-views": "^0.13.9",
+    "sass": "^1.32.10",
     "styled-components": "^4.4.1"
   },
   "keywords": [

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import styled, {keyframes, css} from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import {fadeIn} from 'react-animations';
 
 const fadeInLeftEffect = keyframes`${fadeIn}`;
