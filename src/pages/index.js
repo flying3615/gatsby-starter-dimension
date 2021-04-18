@@ -11,9 +11,9 @@ import noodleMakeBg from '../images/background/noodle_making.jpg'
 
 import laternBg from '../images/background/laternbg.jpg'
 
-import ppbg1 from '../images/background/ppbg1.jpg'
-import ppbg2 from '../images/background/ppbg2.jpg'
-import ppbg3 from '../images/background/ppbg3.jpg'
+import hall from '../images/background/hall.jpg'
+import reception from '../images/background/reception.jpg'
+import fans from '../images/background/fans.jpg'
 import ppbg4 from '../images/background/ppbg4.jpg'
 import Background from '../components/Background'
 
@@ -30,8 +30,8 @@ class IndexPage extends React.Component {
       articleTimeout: false,
       article: '',
       loading: 'is-loading',
-      background: ppbg1,
-      backgrounds: [ppbg2, noodleBg1, noodleMakeBg, ppbg3, ppbg4, laternBg]
+      background: reception,
+      backgrounds: [hall, fans, noodleBg1, noodleMakeBg, ppbg4, laternBg]
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
