@@ -95,7 +95,7 @@ export default class Contact extends Component {
 
           <address>
             <strong>Manager: Linda Yin</strong><br/>
-            Email: <a href="mailto:lindayin0930@gmail.com"> lindayin0930@gmail.com</a><br/>
+            Email: <a href="lindayin@chinabeachrestaurant.co.nz">lindayin@chinabeachrestaurant.co.nz</a><br/>
             Phone: <a href="tel:+6442988862">+6442988862</a><br/>
             Visit us at:<br/>
             <a href="https://maps.google.com/maps?q=China%20beach%20restaurant" target="_blank"> 44 Seaview Road, Paraparaumu Beach, Paraparaumu</a>
