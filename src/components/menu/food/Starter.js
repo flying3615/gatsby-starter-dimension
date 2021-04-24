@@ -6,6 +6,11 @@ import Carousel from 'react-images';
 import Divider from "@material-ui/core/Divider";
 import Entree from "./main/Entree";
 import Soup from "./main/Soup";
+import entreeSoup from "../../../images/menu/entree_soup.jpg";
+
+const seeMenu =(e) => {
+  window.open(e)
+}
 
 const images = [
   {source: soup},
@@ -19,6 +24,10 @@ export default function Starter() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Carousel views={images}/>
+        </Grid>
+
+        <Grid item xs={12}>
+          <img src={entreeSoup} alt="" style={{width:'100%'}} onClick={()=>seeMenu(entreeSoup)}/>
         </Grid>
 
         <Grid container xs={12}>

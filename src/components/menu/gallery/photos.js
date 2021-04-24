@@ -16,10 +16,25 @@ import spice_fish from "../../../images/gallery/spice_fish.jpeg";
 import spring_roll from "../../../images/gallery/spring_roll.jpeg";
 
 
+import fans from "../../../images/gallery/fans.jpg";
+import fan from "../../../images/gallery/fan.jpg";
+import table from "../../../images/gallery/table.jpg";
+import tables from "../../../images/gallery/tables.jpg";
+import reception from "../../../images/gallery/reception.jpg";
+
+
+
+
+
 export const photos = [
   {
     src: noodle2,
     width: 3,
+    height: 3
+  },
+  {
+    src: reception,
+    width: 4,
     height: 3
   },
   {
@@ -38,8 +53,18 @@ export const photos = [
     height: 3
   },
   {
+    src: tables,
+    width: 4,
+    height: 3
+  },
+  {
     src: noodle_background1,
     width: 3,
+    height: 3
+  },
+  {
+    src: fan,
+    width: 4,
     height: 3
   },
   {
@@ -68,6 +93,11 @@ export const photos = [
     height: 4
   },
   {
+    src: fans,
+    width: 4,
+    height: 3
+  },
+  {
     src: spicyMeat,
     width: 4,
     height: 3
@@ -79,6 +109,11 @@ export const photos = [
   },
   {
     src: yumcha,
+    width: 4,
+    height: 3
+  },
+  {
+    src: table,
     width: 4,
     height: 3
   },

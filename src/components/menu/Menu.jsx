@@ -9,7 +9,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-
+import allMenu from "../../data/all_menu.pdf";
 
 function TabPanel(props) {
   const {children, value, index, ...other} = props;
@@ -68,6 +68,9 @@ function a11yProps(index) {
   };
 }
 
+const seeMenu = () => {
+  window.open(allMenu)
+}
 
 export default function Menu(props) {
 
@@ -122,6 +125,10 @@ export default function Menu(props) {
         </TabPanel>
 
       </SwipeableViews>
+
+      <a href="#" onClick={seeMenu} style={{float:'right'}}>
+        See the All Menu...
+      </a>
     </article>
 
   )

@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 
-import Typography from "@material-ui/core/Typography";
 
 import Grid from "@material-ui/core/Grid";
-import {graphql, useStaticQuery} from "gatsby";
 import Beef from "./main/Beef";
 import Divider from "@material-ui/core/Divider";
 import Chicken from "./main/Chicken";
@@ -16,7 +14,6 @@ import Rice from "./main/Rice";
 import Seafood from "./main/Seafood";
 import Tofu from "./main/Tofu";
 import Veg from "./main/Veg";
-import allMenu from "../../../data/all_menu.pdf";
 
 import duck from "../../../images/dishes/duck.jpg";
 import orange_beef from "../../../images/dishes/orange_beef.jpg";
@@ -29,9 +26,13 @@ import chicken from "../../../images/dishes/chicken.jpg";
 import lemon_chicken from "../../../images/dishes/lemon_chicken.jpg";
 
 import Carousel from "react-images";
+import sizzlingChicken from "../../../images/menu/sizzling_chicken.jpg";
+import porkTofu from "../../../images/menu/pork_tofu.jpg";
+import seaFoodBeef from "../../../images/menu/seefood_beef.jpg";
+import friedRiceNoddle from "../../../images/menu/fried_rice_noodle.jpg";
 
-const seeMenu =() => {
-  window.open(allMenu)
+const seeMenu =(e) => {
+  window.open(e)
 }
 
 const images = [
@@ -57,28 +58,15 @@ export default function MainDish() {
           <Carousel views={images}/>
         </Grid>
 
-        <Grid item xs={12}>
-          <button
-            type="button"
-            onClick={seeMenu}
-          >
-            See Menu...
-          </button>
-        </Grid>
-
         <Grid container xs={12}>
-
-          <Grid item xs={12} md={6} spacing={1}>
-            <h3 className="major">Pork/猪肉</h3>
-            <Pork/>
-            <Divider variant="middle"/>
+          <Grid item xs={12} spacing={1}>
+            <img src={sizzlingChicken} alt="" style={{width:'100%'}} onClick={()=>seeMenu(sizzlingChicken)}/>
           </Grid>
 
           <Grid item xs={12} md={6} spacing={1}>
-            <h3 className="major">Chinese BBQ/烧味</h3>
-            <BBQ/>
+            <h3 className="major">Sizzling Plate/铁板烧</h3>
+            <Plate/>
             <Divider variant="middle"/>
-
           </Grid>
 
           <Grid item xs={12} md={6} spacing={1}>
@@ -87,9 +75,44 @@ export default function MainDish() {
             <Divider variant="middle"/>
           </Grid>
 
+          <Grid item xs={12} spacing={1}>
+            <img src={porkTofu} alt="" style={{width:'100%'}} onClick={()=>seeMenu(porkTofu)}/>
+          </Grid>
+
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Pork/猪肉</h3>
+            <Pork/>
+            <Divider variant="middle"/>
+          </Grid>
+
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Tofu/豆腐</h3>
+            <Tofu/>
+            <Divider variant="middle"/>
+          </Grid>
+
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Vegetarian/素菜</h3>
+            <Veg/>
+            <Divider variant="middle"/>
+          </Grid>
+
+          <Grid item xs={12} md={6} spacing={1}>
+            <h3 className="major">Egg Foo Young/芙蓉蛋类</h3>
+            <Egg/>
+            <Divider variant="middle"/>
+          </Grid>
+
+          <Grid item xs={12} spacing={1}>
+            <img src={seaFoodBeef} alt="" style={{width:'100%'}} onClick={()=>seeMenu(seaFoodBeef)}/>
+          </Grid>
+
           <Grid item xs={12} md={6} spacing={1}>
             <h3 className="major">Beef/牛肉</h3>
             <Beef/>
+            <Divider variant="middle"/>
+            <h3 className="major">Chinese BBQ/烧味</h3>
+            <BBQ/>
             <Divider variant="middle"/>
           </Grid>
 
@@ -99,21 +122,10 @@ export default function MainDish() {
             <Divider variant="middle"/>
           </Grid>
 
-          <Grid item xs={12} md={6} spacing={1}>
-            <h3 className="major">Sizzling Plate/铁板烧</h3>
-            <Plate/>
-            <Divider variant="middle"/>
+          <Grid item xs={12} spacing={1}>
+            <img src={friedRiceNoddle} alt="" style={{width:'100%'}} onClick={()=>seeMenu(friedRiceNoddle)}/>
           </Grid>
-          <Grid item xs={12} md={6} spacing={1}>
-            <h3 className="major">Tofu/豆腐</h3>
-            <Tofu/>
-            <Divider variant="middle"/>
-          </Grid>
-          <Grid item xs={12} md={6} spacing={1}>
-            <h3 className="major">Vegetarian/素菜</h3>
-            <Veg/>
-            <Divider variant="middle"/>
-          </Grid>
+
 
           <Grid item xs={12} md={6} spacing={1}>
             <h3 className="major">Fired Noodles/炒面</h3>
@@ -124,11 +136,6 @@ export default function MainDish() {
           <Grid item xs={12} md={6} spacing={1}>
             <h3 className="major">Fried Rice/炒饭</h3>
             <Rice/>
-            <Divider variant="middle"/>
-          </Grid>
-          <Grid item xs={12} md={6} spacing={1}>
-            <h3 className="major">Egg Foo Young/芙蓉蛋类</h3>
-            <Egg/>
             <Divider variant="middle"/>
           </Grid>
 

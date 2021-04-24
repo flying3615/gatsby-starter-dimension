@@ -1,28 +1,11 @@
 import React, {Component} from 'react';
 import Grid from '@material-ui/core/Grid';
-import {Document, Page} from "react-pdf";
 import setMenu from "../../../data/set_menu.pdf";
-import Hidden from "@material-ui/core/Hidden";
 import SetMenu from "./main/SetMenu";
+import setMenu1 from "../../../images/menu/set_menu_1.jpg";
+import setMenu2 from "../../../images/menu/set_menu_2.jpg";
 
 class SetMenus extends Component {
-  // const classes = useStyles()
-  state = {
-    numPages: null,
-    pageNumber: 1,
-  }
-
-  onDocumentLoadSuccess = ({numPages}) => {
-    this.setState({numPages});
-  }
-
-  changePage = offset => this.setState(prevState => ({
-    pageNumber: prevState.pageNumber + offset,
-  }));
-
-  previousPage = () => this.changePage(-1);
-
-  nextPage = () => this.changePage(1);
 
   seeMenu = () => {
     window.open(setMenu)
@@ -30,66 +13,15 @@ class SetMenus extends Component {
 
 
   render() {
-    const {pageNumber, numPages} = this.state;
-
     return (
       <Grid>
         <Grid container spacing={3}>
-
-          {/*hide menu in small view*/}
-          <Hidden xsDown>
-            <Grid item xs={12} container justify="center">
-              <Grid item>
-                <Document
-                  file={setMenu}
-                  onLoadSuccess={this.onDocumentLoadSuccess}
-                >
-                  <Page pageNumber={pageNumber}/>
-                </Document>
-              </Grid>
-
-              <Grid item container direction="row"
-                    justify="space-around"
-                    alignItems="center">
-                <Grid item>
-                  <button
-                    type="button"
-                    disabled={pageNumber <= 1}
-                    onClick={this.previousPage}
-                  >
-                    Previous
-                  </button>
-                </Grid>
-                <Grid item>
-                  <p>
-                    Page {pageNumber || (numPages ? 1 : '--')} of {numPages || '--'}
-                  </p>
-                </Grid>
-                <Grid item>
-                  <button
-                    type="button"
-                    disabled={pageNumber >= numPages}
-                    onClick={this.nextPage}
-                  >
-                    Next
-                  </button>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Hidden>
-
-          {/*show bottom to show menu*/}
-          <Hidden smUp>
-            <Grid item xs={12} container justify="center">
-              <button
-                type="button"
-                onClick={this.seeMenu}
-              >
-                See Menu...
-              </button>
-            </Grid>
-          </Hidden>
-
+          <Grid item>
+           <img src={setMenu1} alt="" style={{width:'100%'}} onClick={()=>this.seeMenu(setMenu1)}/>
+          </Grid>
+          <Grid item>
+            <img src={setMenu2} alt="" style={{width:'100%'}} onClick={()=>this.seeMenu(setMenu2)}/>
+          </Grid>
           <Grid item xs={12}>
             <SetMenu/>
           </Grid>
